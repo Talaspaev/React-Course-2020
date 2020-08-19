@@ -40,4 +40,5 @@ const filmsData = [
         releaseDate: 123,
     },
 ];
+
 export default filmsData;

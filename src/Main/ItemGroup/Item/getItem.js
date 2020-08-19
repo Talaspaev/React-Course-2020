@@ -2,11 +2,13 @@ import React from 'react';
 
 import style from './getItem.module.css';
 
-const GetItem = (props) => {
-    const { itemsData } = props;
-    const itemsArray = Object.values(itemsData);
+class GetItem extends React.Component {
+    constructor(props) {
+        super(props)
+        this.itemsArray = props.itemsData;
+    }
 
-    const createOneItem = ({ image, title, releaseDate, genre }, index) => {
+    createOneItem({ image, title, releaseDate, genre }, index) {
         return (<div className={style.wrapper} key={index}>
             <div className={style.itemImages}>
                 <img src={image} />
@@ -17,11 +19,15 @@ const GetItem = (props) => {
             <p className={style.p}>{genre}</p>
         </div>)
     };
-    const RouteItem = itemsArray.map(createOneItem);
 
-    return (
-        RouteItem
-    );
-};
+    RouteItem() { return this.itemsArray.map(this.createOneItem) };
+
+    render() {
+        return (
+            this.RouteItem()
+        );
+    };
+
+}
 
 export default GetItem;

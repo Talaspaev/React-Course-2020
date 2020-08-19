@@ -12,9 +12,14 @@ import filmsData from './assets/ImagesData';
 
 import style from './App.module.css';
 
-const App = () => (<div className={style.app}>
-    <Main itemsData={filmsData} />
-    <Footer />
-</div>)
+class App extends React.PureComponent {
+    render() {
+        return (
+            <div className={style.app}>
+                <Main itemsData={filmsData} />
+                <Footer />
+            </div>)
+    }
+}
 
 export default App;
