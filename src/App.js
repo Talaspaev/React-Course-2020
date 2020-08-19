@@ -5,11 +5,16 @@ import CreatePureComponent from './task1/CreatePureComponent';
 import CreateComponent from './task1/CreateComponent';
 import CreateElement from './task1/CreateElement';
 
-const App = () => (<div>
-    <CreateFunctionalComponent />
-    <CreatePureComponent />
-    <CreateComponent />
-    {CreateElement}
+import Main from './Main/Main';
+import Footer from './Footer/Footer';
+
+import filmsData from './assets/ImagesData';
+
+import style from './App.module.css';
+
+const App = () => (<div className={style.app}>
+    <Main itemsData={filmsData} />
+    <Footer />
 </div>)
 
 export default App;
