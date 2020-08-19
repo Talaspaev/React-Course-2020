@@ -2,6 +2,8 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
+import style from './ResultCount.module.css'
+
 class ResultCount extends React.Component {
     constructor(props) {
         super(props);
@@ -9,8 +11,8 @@ class ResultCount extends React.Component {
     }
     render() {
         return (
-            <div>
-                <span>{this.count} movies found</span>
+            <div className={style.wrapper}>
+                <h3 className={style.count}><strong>{this.count}</strong> movies found</h3>
             </div>
         )
     }

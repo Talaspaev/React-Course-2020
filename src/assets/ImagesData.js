@@ -1,5 +1,7 @@
 import image1 from './first.png'
 
+const genreData = ["ALL", "Documentary", "Comedy", "Horror", "Crime"]
+
 const filmsData = [
     {
         title: "hello",
@@ -41,4 +43,4 @@ const filmsData = [
     },
 ];
 
-export default filmsData;
+export { filmsData, genreData };
