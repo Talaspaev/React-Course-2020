@@ -10,13 +10,16 @@ class ResultFilter extends React.Component {
         this.genreArray = props.genreData;
     }
 
-    createOneItem(elem, index) { return <li className={style.element} key={index}>{elem}</li>};
+    createOneItem(elem, index) { return <li className={style.element} key={index}>{elem}</li> };
 
     RouteItem() { return this.genreArray.map(this.createOneItem) };
 
     render() {
         return (
-            <ul className={style.wrapper} >{this.RouteItem()}</ul>
+            <div className={style.wrapper} >
+                <ul className={style.genreContainer}>{this.RouteItem()}</ul>
+                <div className={style.sortContainer}><span>SORT BY</span><span className={style.releaseDate}>REALASE DATE</span> <div className={style.triangleDown}></div></div>
+            </div>
         );
     };
 }
