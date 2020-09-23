@@ -1,7 +1,8 @@
 import React from 'react';
 
+import errorImg from '../../assets/404.png';
+
 import style from './ErrorBoundary.module.css';
-import errorImg from '../assets/404.png';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
