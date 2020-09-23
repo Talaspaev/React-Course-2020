@@ -1,0 +1,20 @@
+.wrapper {
+    margin:20px 60px;
+}
+
+.itemImages {
+    width: 100%;
+}
+
+.title {
+    display      : inline-block;
+    border       : 1px solid black;
+    border-radius: 6px;
+    padding      : 4px 8px;
+}
+
+.textWrapper {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}

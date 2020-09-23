@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    margin-left: 60px;
+    align-items: center;
+    max-width: 1270px;
+    color: #ffffff;
+    height: 50px;
+}
+.count {
+    font-weight: lighter;
+}
