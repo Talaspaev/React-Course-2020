@@ -8,10 +8,11 @@ class SearchWrapper extends React.Component {
     render() {
         return (
             <div className={style.wrapper} >
-                <div><h1>FIND YOUR MOVIE</h1> <button className={style.addButton}>+ADD MOVIE</button></div>
+                <div><h1>FIND YOUR MOVIE</h1>
+                <button onClick={this.props.handleOpenAddModal} className={style.addButton}>ADD MOVIE</button></div>
                 <div className={style.searchContainer}>
                     <input type="text" name="name" />
-                    <button className={style.searchButton}>+ADD MOVIE</button>
+                    <button onClick={this.props.handleOpenEditModal} className={style.searchButton}>SEARCH</button>
                 </div>
             </div>
         );
