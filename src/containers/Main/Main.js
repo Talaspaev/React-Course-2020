@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { getMovies } from '../../core/api';
+
 import ErrorBoundary from '../../components/Error/ErrorBoundary';
 import Items from '../../components/ItemGroup/ItemGroup';
 import ResultCount from '../../components/ResultCount/ResultCount';
@@ -17,6 +19,11 @@ class Main extends React.Component {
         showAddModal: false,
         showEditModal: false
     };
+
+    async componentDidMount() {
+        const movies = await getMovies();
+        console.log(movies);
+    }
 
     handleOpenAddModal = () => {
         this.setState({ showAddModal: true });
