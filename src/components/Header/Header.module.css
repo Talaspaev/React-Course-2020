@@ -1,12 +1,18 @@
 .title{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     color: #f65261;
     padding: 0.5rem 0;
 }
 header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    max-width: 1205px;
-    padding: 20px 0;
-    padding-left: 40px;
+    flex-direction: column;
 }
+h4,button {
+    margin: 0 40px;
+}
+ 

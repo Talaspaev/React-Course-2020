@@ -6,7 +6,6 @@ import style from './ErrorBoundary.module.css';
 
 class ErrorBoundary extends React.Component {
     constructor(props) {
-        super(props);
         this.state = { hasError: false }
     }
     static getDerivedStateFromError(props) {

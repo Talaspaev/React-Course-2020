@@ -3,9 +3,19 @@
     position: relative;
     flex-direction: column;
     align-items   : center;
-    background    : #232323;
     margin        : 0 auto;
+    padding: 0 60px;
+    background: #555555;
 }
 *{
     margin: 0;
+}
+main {   
+    background: #232323;
+    padding: 0 30px;
+}
+header {
+    background: url("https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-and-smoky-atmosphere-background_1048-11333.jpg?size=626&ext=jpg");
+    background-size: cover;
+    margin-bottom: 20px;
 }

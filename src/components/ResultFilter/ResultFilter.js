@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import createOneGenre from './createOneGenre/createOneMovie';
+
 import style from './ResultFilter.module.css'
 
 class ResultFilter extends React.Component {
-    constructor(props) {
-        super(props)
-        this.genreArray = props.genreData;
+    state = {
+        genreData: this.props.genreData,
     }
-
-    createOneItem(elem, index) { return <li className={style.element} key={index}>{elem}</li> };
-
-    RouteItem() { return this.genreArray.map(this.createOneItem) };
-
     render() {
         return (
             <div className={style.wrapper} >
-                <ul className={style.genreContainer}>{this.RouteItem()}</ul>
-                <div className={style.sortContainer}><span>SORT BY</span><span className={style.releaseDate}>REALASE DATE</span> <div className={style.triangleDown}></div></div>
+                <ul className={style.genreContainer}>
+                    {this.state.genreData.map(createOneGenre)}
+                </ul>
+                <div className={style.sortContainer}><span>SORT BY</span>
+                    <span className={style.releaseDate}>REALASE DATE</span>
+                    <div className={style.triangleDown}></div></div>
             </div>
         );
     };

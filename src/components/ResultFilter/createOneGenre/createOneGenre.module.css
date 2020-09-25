@@ -1,0 +1,7 @@
+.element {
+    list-style-type: none;
+    padding: 25px 0;
+}
+.element:hover {
+    border-bottom: 1px solid #f65261;
+}

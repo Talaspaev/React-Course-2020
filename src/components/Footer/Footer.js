@@ -7,11 +7,8 @@ class Footer extends React.PureComponent {
         return (
             <footer className={style.footer}>
                 <h4>
-                    <strong>netflixа</strong>
+                    <strong>netflixа</strong>roulette
                 </h4>
-                <h4>
-                    roulette
-            </h4>
             </footer>
         )
     }

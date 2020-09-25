@@ -2,17 +2,17 @@ import React from 'react';
 
 import { getMovies } from '../../core/api';
 
+import Header from '../../components/Header/Header';
 import ErrorBoundary from '../../components/Error/ErrorBoundary';
-import Items from '../../components/ItemGroup/ItemGroup';
+import CreateMoviesConatiner from '../../components/MoviesContainer/CreateMoviesConatiner';
 import ResultCount from '../../components/ResultCount/ResultCount';
 import ResultFilter from '../../components/ResultFilter/ResultFilter';
-import SearchWrapper from '../../components/SearchWrapper/SearchWrapper';
 
 import AddModal from './AddModal/AddModal';
 import EditModal from './EditModal/EditModal';
 
 
-import { filmsData, genreData } from '../../assets/ImagesData';
+import { moviesData, genreData } from '../../assets/ImagesData';
 
 class Main extends React.Component {
     state = {
@@ -43,21 +43,21 @@ class Main extends React.Component {
     render() {
         return (
             <ErrorBoundary>
-                <SearchWrapper
-                    handleOpenAddModal={this.handleOpenAddModal}
-                    handleOpenEditModal={this.handleOpenEditModal}
-                />
-                <ResultFilter genreData={genreData} />
-                <ResultCount count={filmsData.length} />
-                <Items itemsData={filmsData} />
-                <AddModal
-                    showModal={this.state.showAddModal}
-                    handleCloseModal={this.handleCloseAddModal}
-                />
-                <EditModal
-                    showModal={this.state.showEditModal}
-                    handleCloseModal={this.handleCloseEditModal}
-                />
+                <Header   handleOpenAddModal={this.handleOpenAddModal}
+                        handleOpenEditModal={this.handleOpenEditModal}/>
+                <main>
+                    <ResultFilter genreData={genreData} />
+                    <ResultCount count={moviesData.length} />
+                    <CreateMoviesConatiner moviesData={moviesData} />
+                    <AddModal
+                        showModal={this.state.showAddModal}
+                        handleCloseModal={this.handleCloseAddModal}
+                    />
+                    <EditModal
+                        showModal={this.state.showEditModal}
+                        handleCloseModal={this.handleCloseEditModal}
+                    />
+                </main>
             </ErrorBoundary>
         )
     }
